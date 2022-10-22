@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name="format-detection" content="telephone=no">
+<title>ご予約</title>
+<meta name="Description" content="" />
+<meta name="Keywords" content="" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<style type="text/css">
+#formWrap {
+ 
+	width:700px;
+	margin:0 auto;
+	color:#555;
+	line-height:120%;
+	font-size:90%;
+  margin-top: 50px;
+}
+table.formTable{
+  
+	width:100%;
+	margin:0 auto;
+	border-collapse:collapse;
+}
+table.formTable td,table.formTable th{
+	
+	padding: 20px;
+}
+table.formTable th{
+	width:30%;
+	font-weight:normal;
+	text-align:left;
+}
+
+.border{
+  margin: 15px 0 15px 0 ;
+  border: 1px solid grey;
+}
+/*　簡易版レスポンシブ用CSS（必要最低限のみとしています。ブレークポイントも含め自由に設定下さい）　*/
+@media screen and (max-width:572px) {
+#formWrap {
+	width:95%;
+	margin:0 auto;
+}
+
+table.formTable th, table.formTable td {
+	width:auto;
+	display:block;
+}
+table.formTable th {
+	margin-top:5px;
+	border-bottom:0;
+}
+form input[type="text"], form textarea {
+	width:80%;
+	padding:5px;
+	font-size:110%;
+	display:block;
+}
+form input[type="submit"], form input[type="reset"], form input[type="button"] {
+	display:block;
+	width:100%;
+	height:40px;
+}
+}
+</style>
+</head>
+<body>
+<div id="formWrap">
+  <h3>ご予約
+  </h3>
+  <div class="border"></div>
+  <form method="post" action="mail.php">
+    <table class="formTable">
+      <tr>
+        <th>お名前</th>
+        <td><input size="20" type="text" name="お名前" /> ※必須</td>
+      </tr>
+      <tr>
+        <th>電話番号（半角）</th>
+        <td><input size="30" type="text" name="電話番号" /> ※必須</td>
+      </tr>
+      <tr>
+        <th>Mail（半角）</th>
+        <td><input size="30" type="text" name="Email" /> ※必須</td>
+      </tr>
+      <tr>
+        <th>撮影人数</th>
+        <td><input size="30" type="text" name="撮影人数" /> ※必須</td>
+      </tr>
+      <tr>
+        <th>その他ご質問等<br /></th>
+        <td><textarea name="その他ご質問等" cols="50" rows="5"></textarea></td>
+      </tr>
+    </table>
+    <p><br>※ご連絡いただいてから、誤記載されたメールアドレス宛に詳しい空き時間をお知らせいたします。<br></p>
+    <p align="center">
+      <input type="submit" value="　 送信 　" />
+    </p>
+  </form>
+  
+</div>
+</body>
+</html>

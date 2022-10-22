@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#ytPlayerWrap{
+    position: relative;
+    height: 500px;
+    width: 100%;
+  }
+  

@@ -1,0 +1,636 @@
+@charset "utf-8";
+/* CSS Document */
+
+html{
+color: #2e2d2d;
+letter-spacing: 0.2rem;
+line-height: 190%;
+}
+
+
+/**************************Wrapper****************************/
+body{
+  max-width: 1680px;
+  margin: auto;
+}
+
+
+/* ハンバーガー
+--------------------------------------------------- */
+#hamburger .btn-gNav{
+	position: fixed;
+	top: 27px;
+	right: 20px;
+	width: 40px;
+	height: 24px;
+	z-index: 3;
+	box-sizing: border-box;
+	cursor: pointer;
+	-webkit-transition: all 400ms;
+	transition: all 400ms;
+}
+#hamburger .btn-gNav-menu{
+	position: fixed;
+	top: 50px;
+	right: 1.8rem;
+  letter-spacing: 0.01rem;
+	width: 35px;
+	z-index: 3;
+	cursor: pointer;
+	-webkit-transition: all 400ms;
+	transition: all 400ms;
+  color: #737373;
+  font-size: small;
+}
+
+
+.solid{
+	position: absolute;
+	width: 85%;
+	height: 2px;
+	background: #666;
+	-webkit-transition: all 400ms;
+	transition: all 400ms;
+}
+
+
+
+#hamburger .btn-gNav span:nth-child(1) {
+	top:0;
+}
+#hamburger .btn-gNav span:nth-child(2) {
+	top:10px;
+}
+#hamburger .btn-gNav span:nth-child(3) {
+	top:20px;
+}
+#hamburger .btn-gNav span:nth-child(4) {
+  
+	top:30px;
+}
+#hamburger .btn-gNav.open span:nth-child(1){
+	background: black;
+	top: 6px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform   : rotate(-45deg);
+	transform        : rotate(-45deg);
+}
+#hamburger .btn-gNav.open span:nth-child(2),#hamburger .btn-gNav.open span:nth-child(3){
+	top: 6px;
+	background :black;
+	-webkit-transform: rotate(45deg);
+	-moz-transform   : rotate(45deg);
+	transform        : rotate(45deg);
+}
+#gNav{
+    /*********グロバル中身********/
+  font-family: 'Kiwi Maru', serif;
+	position: fixed;
+	top: 0;
+	right: -100%;
+	width: 30%;
+	height: 100%;
+	background: rgb(192, 190, 190);
+	font-size: 16px;
+	box-sizing: border-box;
+	z-index: 2;
+	margin: auto;
+	transition: .4s;
+  padding-top: 10%;
+
+}
+#gNav.open{
+	right: 0px;
+}
+#gNav .gNav-menu{
+  letter-spacing: 0.3rem;
+	width: 80%;
+	height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#gNav .gNav-menu li{
+	display: block;
+	padding : 20px 30px;
+}
+#gNav .gNav-menu li a{
+	color: black;
+	text-decoration: none;
+}
+
+.yoyakubtn .btn_02{
+  width:10rem; 
+}
+
+/***************** 画面サイズ560px未満 スマホ用CSS ********************/
+@media screen and (max-width: 559px){
+
+
+
+  #gNav{
+    /*********グロバル中身********/
+
+	width: 100%;
+  }
+  #gNav .gNav-menu{
+    letter-spacing: 0.3rem;
+    width: 80%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+}
+/*****************end********************/
+
+
+
+/************************* ボタン **************************/
+.btn {
+  
+    max-width: 250px;
+    font-family: 'Kiwi Maru', serif;
+  }
+  a.btn_02 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 1px solid rgb(73, 73, 73);
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding: 0 6% 0 12%;
+    color: rgb(73, 73, 73);
+    font-size: 16px;
+    text-align: left;
+    text-decoration: none;
+    position: relative;
+    transition-duration: 0.2s;
+  }
+  a.btn_02:hover {
+    background: #bea893;
+    color: #fff;
+  }
+  a.btn_02:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 8px;
+    border-color: transparent transparent transparent #737373;
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    margin-top: -7px;
+  }
+  a.btn_02:hover:before {
+    border-color: transparent transparent transparent #fff;
+  }
+
+/*************************top**************************/
+
+/****************fixed*****************/
+
+header .logo{
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: fixed;
+  width: 15rem;
+  height:5rem;
+	top: 1rem;
+  left:1.5rem ;
+  
+
+}
+.insta{
+  background-image: url(../img/insta.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: fixed;
+  width: 35px;
+  height: 35px;
+	bottom: 1.2rem;
+  left:1.5rem ;
+  
+}
+
+
+/****************main*****************/
+
+.back{
+  background-color: #F4F4F4;
+  min-width: 1200px;
+  padding: 8% ;
+  display: flex;
+}
+
+.slick{
+  width: 568px;
+  height: 663px;
+}
+
+
+.top .haco{
+  width: 550px;
+}
+.top section{
+  width: 100%;
+  margin-left: 10%;
+  font-family: 'Shippori Mincho', serif;
+  color: rgb(65, 64, 64);
+  
+}
+.top .haco .btn{
+  margin-left: auto;
+  margin-top: 21%;
+}
+
+.top h3{
+  margin:5% 0 0 2%;
+  width: 100%;
+  font-size: large;
+  font-weight: 600;
+  line-height: 190%;
+  letter-spacing: 0.18em;
+}
+.top .haco p{
+  width: 100%;
+  margin:15% 0 0 2%;
+  line-height: 180%;
+  letter-spacing: 0.15em;
+}
+
+
+  
+/****************map*****************/
+
+
+.map{
+  width: 100%;
+  height:500px;
+  margin: 10% 0 35% 0;
+}
+
+article{
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.map .logo{
+  background-image: url(..//img/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  width: 20rem;
+  height:8rem;
+}
+
+.waku{
+  width: 32rem;
+}
+.map .googlemap{
+  max-width: 1200px;
+  margin: auto;
+  height: 381px;
+}
+.set{
+  width: 100%;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.set .btn_02{
+  width: 15rem;
+}
+
+
+/****************footer*****************/
+
+footer{
+
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #EDECEB;
+
+}
+
+/***************** 画面サイズ560px未満 スマホ用CSS ********************/
+/***************** topページ ********************/
+@media screen and (max-width: 559px){
+
+
+  body{
+    max-width: 559px;
+    margin: auto;
+
+  }
+  .top .back{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+.top .haco{
+  width: 100%;
+
+}
+
+.waku{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+
+article{
+  flex-direction:column;
+
+}
+
+
+.map .googlemap{
+  display: none;
+
+}
+}
+
+/*****************end********************/
+
+
+
+
+
+
+
+/****************写真館について*****************/
+/****************写真館について*****************/
+
+.shasinnkannnituite{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} 
+
+.shasinnkannnituite .title h2{
+font-size: 1.2rem;
+font-weight: 600;
+letter-spacing: 0.4rem;
+color: #3b3b3b;
+}
+.shasinnkannnituite .text{
+  text-align: center;
+  margin: 2%;
+}
+.shasinnkannnituite h3{
+font-size: 1rem;
+font-weight: 600;
+letter-spacing: 0.4rem;
+color: #3b3b3b;
+margin-bottom: 3%;
+border-bottom:1px dashed rgb(200, 103, 33);
+}
+.honbun{
+  width: 65%;
+}
+dl{
+  background:rgb(248, 248, 248);
+  width:60%;
+  margin-bottom: 10%;
+}
+
+dt{
+  color:rgb(200, 103, 33);
+  font-weight:bold;
+  padding:0 10px 0 0;
+  width:120px;
+  float:left;
+  margin-bottom:7px;
+}
+
+dd{
+  color:#333;
+  margin-bottom:7px;
+}
+
+dl::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.youtubu{
+  margin: auto;
+}
+
+
+
+/****************サービスの流れ*****************/
+/****************サービスの流れ*****************/
+/****************サービスの流れ*****************/
+
+
+.sa-bisu{
+  width: 100%;
+  margin: auto;
+  color: #2e2d2d;
+}
+.sa-bisu p{
+  letter-spacing: 0.2rem;
+  line-height: 155%;
+}
+.title{
+  width: 100%;
+  margin-bottom: 10%;
+  padding-top:7.5rem ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title .small{
+  font-size: small;
+  color: #D88B5B;
+}
+.sen{
+  background:linear-gradient(transparent 92%, #D88B5B 0%);
+}
+.title h2{
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.9rem;
+  color: #3b3b3b;
+}
+table{
+  background-color:#F4F4F4;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+td, th {
+  padding: 30px 45px;
+}
+tr{
+  padding: 1rem;
+}
+.btn_t{
+  width: 45%;
+  margin-top: 1.5rem;
+}
+.sa-bisu img{
+  width: 3.5rem;  
+}
+
+/****************見本写真*****************/
+/****************見本写真*****************/
+/****************見本写真*****************/
+
+.mihonnsyasinn{
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+}
+.mihonnsyasinn .haco{
+  margin-bottom: 3rem;
+}
+
+
+/****************道順*****************/
+/****************道順*****************/
+/****************道順*****************/
+
+.mitijun{
+  width: 100%;
+  margin: auto;
+  color: #2e2d2d;
+  padding-top: 5rem;
+
+}
+.miti{
+  width: 60%;
+  padding: 5%;
+  margin: auto;
+}
+
+.miti .pic1{
+  background-image: url(../img/miti01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:40rem;
+  height:20rem;
+}
+.miti .pic2{
+  background-image: url(../img/miti02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 1%;
+  width: 40rem;
+  height: 20rem;
+}
+.miti .pic3{
+  background-image: url(../img/miti03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40rem;
+  height: 20rem;
+}
+.miti .pic5{
+  background-image: url(../img/miti05.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 1%;
+  width: 40rem;
+  height: 20rem;
+}
+.miti .pic6{
+  background-image: url(../img/miti06.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 1%;
+  width: 40rem;
+  height: 20rem;
+}
+.miti .pic7{
+  background-image: url(../img/miti07.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 1%;
+  width: 40rem;
+  height: 20rem;
+}
+
+
+/****************************************
+********************撮り手*****************
+******************************************/
+
+.torite{
+  width: 100%;
+  height: 850px;
+  background: linear-gradient(180deg, #fff 0%, #fff 50%, #EDECEB 50%, #EDECEB 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.torite .ga{
+  background-image: url(../img/torite_satosoki.png);
+  background-repeat: no-repeat;
+  background-size:contain;
+  width: 60%;
+  height: 350px;
+  margin: auto;
+}
+
+.torite .ji{
+  
+  letter-spacing: 0.6rem;
+  
+}
+.sato{
+
+  text-align: center;
+  font-size: 1.8em;
+  letter-spacing: 1em;
+  margin-top: 2rem;
+  color: rgb(49, 49, 49);
+}
+.yomi{
+  text-align: center;
+  font-size: small;
+  color: #D88B5B;
+  margin-bottom: 3.5rem;
+ 
+}
+
+.bun {
+  color: #666;
+  line-height: 1.8rem;
+  text-align: center;
+  
+}
+
